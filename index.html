@@ -218,7 +218,8 @@ display: none;
     font-size: 28px;
   }
 }
-@media (orientation: landscape) {
+/* 手机横屏：显示半圆时钟 */
+@media (max-width: 1024px) and (orientation: landscape) {
 
   .main {
     flex-direction: row;
@@ -229,14 +230,15 @@ display: none;
   #clock {
     display: block !important;
     position: absolute;
-    height: 120vw;
     width: 120vw;
-    max-height: 600px;
-    max-width: 600px;
+    height: 120vw;
+    max-width: 560px;
+    max-height: 560px;
     right: -60%;
     top: 50%;
     transform: translateY(-50%);
     border-width: 16px;
+    clip-path: inset(0 50% 0 0); /* 半圆 */
   }
 
   #clock-table {
@@ -246,16 +248,10 @@ display: none;
     left: 3%;
   }
 
-  /* 半圆效果：只露左半边 */
-  #clock {
-    clip-path: inset(0 60% 0 0);
-  }
-
   .clock-thick span {
     font-size: 26px;
   }
 }
-
 
     </style>
 </head>
