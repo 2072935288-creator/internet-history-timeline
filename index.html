@@ -136,6 +136,58 @@
             top: calc(50% - .5px);
             left: 0px;
         }
+        /* =========================
+   Mobile Readable Version
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .main {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  /* 隐藏桌面端交互元素 */
+  #up-btn,
+  #down-btn {
+    display: none;
+  }
+
+  #clock {
+    display: none;
+  }
+
+  /* 内容区改为正常文档流 */
+  #content {
+    position: static;
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .card {
+    height: auto;
+    transform: none !important;
+    margin-bottom: 64px;
+  }
+
+  .card-time {
+    font-size: 32px;
+  }
+
+  .card-title {
+    font-size: 36px;
+  }
+
+  .card-passage {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
 
     </style>
 </head>
