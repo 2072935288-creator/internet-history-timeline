@@ -218,6 +218,44 @@ display: none;
     font-size: 28px;
   }
 }
+@media (orientation: landscape) {
+
+  .main {
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #clock {
+    display: block !important;
+    position: absolute;
+    height: 120vw;
+    width: 120vw;
+    max-height: 600px;
+    max-width: 600px;
+    right: -60%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 16px;
+  }
+
+  #clock-table {
+    width: 94%;
+    height: 94%;
+    top: 3%;
+    left: 3%;
+  }
+
+  /* 半圆效果：只露左半边 */
+  #clock {
+    clip-path: inset(0 50% 0 0);
+  }
+
+  .clock-thick span {
+    font-size: 26px;
+  }
+}
+
 
     </style>
 </head>
