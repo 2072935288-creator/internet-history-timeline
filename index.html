@@ -136,9 +136,7 @@
             top: calc(50% - .5px);
             left: 0px;
         }
-        /* =========================
-   Mobile Readable Version
-   ========================= */
+        
 @media (max-width: 768px) {
 
   body {
@@ -152,21 +150,32 @@
     overflow-y: auto;
   }
 
-  /* 隐藏桌面端交互元素 */
-  #up-btn,
-  #down-btn {
-    display: none;
-  }
+#up-btn,
+#down-btn {
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  opacity: 0.7;
+}
 
-  #clock {
-    display: none;
-  }
+#up-btn {
+  top: 16px;
+}
+
+#down-btn {
+  bottom: 16px;
+}
+
+#clock {
+display: none;
+}
 
   /* 内容区改为正常文档流 */
   #content {
     position: static;
     width: 100%;
-    padding: 40px 20px;
+    padding:  20px 12px;
   }
 
   .card {
