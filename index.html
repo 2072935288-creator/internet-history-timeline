@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互联网史时间线</title>
+    <link rel="stylesheet" href="./font /iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            position: relative;
+            background-color: #8277c8;
+            overflow: hidden;
+        }
+        
+        .iconfont {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            left: 27%;
+            z-index: 999;
+            font-size: 80px;
+            color: #c0b5eb;
+        }
+
+        #up-btn {
+            top: 5%;
+        }
+
+        #down-btn {
+            bottom: 5%;
+        }
+
+        #content {
+            width: 30%;
+            height: 100%;
+            position: absolute;
+            left: 15%;
+            overflow: hidden;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #fff;
+            transition: transform .8s ease-in-out;
+        }
+
+        .card-time {
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .card-title {
+            font-size: 50px;
+            font-weight: 500;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .card-passage {
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        #clock {
+            height: 130%;
+            aspect-ratio: 1 / 1;
+            position: absolute;
+            border-radius: 50%;
+            right: -38%;
+            top: -15%;
+            background-color: #fff;
+            border:  #c0b5eb 30px solid;
+        }
+
+        @media(max-width:1000px) {
+            #clock {
+                right: -90%;
+            }
+        }
+
+        #clock-table {
+            width: 96%;
+            height: 96%;
+            border-radius: 50%;
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            transition: transform .8s ease-in-out;
+        }
+
+        .invisible-table {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform-origin: 50% 50%;
+            position: absolute;
+        }
+
+        .clock-thick {
+            width: 6%;
+            height: 6px;
+            background-color: #8277c8;
+            position: absolute;
+            top: calc(50% - 3px);
+            left: 0px;
+        }
+
+        .clock-thick span {
+            font-size: 50px;
+            position: absolute;
+            left: 140%;
+            top: calc(50% - 30px);
+            color: #8277c8;
+        }
+
+        .clock-scale {
+            width: 4%;
+            height: 2px;
+            background-color: #8277c8;
+            position: absolute;
+            top: calc(50% - .5px);
+            left: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <i class="iconfont icon-jiantoushang" id="up-btn" onclick="slideToPrev()"></i>
+        <i class="iconfont icon-jiantouxia" id="down-btn" onclick="slideToNext()"></i>
+        <div id="content">
+            <div class="card">
+                <div class="card-time">1969</div>
+                <div class="card-title">没有</div>
+                <div class="card-passage">
+                    <br>
+                    这是一个测试文本，用于展示卡片内容的布局效果。你可以在这里添加更多的信息，描述这个时间点的重要事件和背景。
+                    <br>
+                    <br>
+                    继续添加一些文本，以确保内容足够丰富，能够展示出卡片的设计效果。你可以根据需要调整文本的长度和格式。
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-time">1989</div>
+                <div class="card-title">没有</div>
+                <div class="card-passage">
+                    <br>
+                    这是一个测试文本，用于展示卡片内容的布局效果。你可以在这里添加更多的信息，描述这个时间点的重要事件和背景。
+                    <br>
+                    <br>
+                    继续添加一些文本，以确保内容足够丰富，能够展示出卡片的设计效果。你可以根据需要调整文本的长度和格式。
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-time">1998</div>
+                <div class="card-title">没有</div>
+                <div class="card-passage">
+                    <br>
+                    这是一个测试文本，用于展示卡片内容的布局效果。你可以在这里添加更多的信息，描述这个时间点的重要事件和背景。
+                    <br>
+                    <br>
+                    继续添加一些文本，以确保内容足够丰富，能够展示出卡片的设计效果。你可以根据需要调整文本的长度和格式。
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-time">2007</div>
+                <div class="card-title">没有</div>
+                <div class="card-passage">
+                    <br>
+                    这是一个测试文本，用于展示卡片内容的布局效果。你可以在这里添加更多的信息，描述这个时间点的重要事件和背景。
+                    <br>
+                    <br>
+                    继续添加一些文本，以确保内容足够丰富，能够展示出卡片的设计效果。你可以根据需要调整文本的长度和格式。
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-time">2010</div>
+                <div class="card-title">没有</div>
+                <div class="card-passage">
+                    <br>
+                    这是一个测试文本，用于展示卡片内容的布局效果。你可以在这里添加更多的信息，描述这个时间点的重要事件和背景。
+                    <br>
+                    <br>
+                    继续添加一些文本，以确保内容足够丰富，能够展示出卡片的设计效果。你可以根据需要调整文本的长度和格式。
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-time">2015</div>
+                <div class="card-title">没有</div>
+                <div class="card-passage">
+                    <br>
+                    这是一个测试文本，用于展示卡片内容的布局效果。你可以在这里添加更多的信息，描述这个时间点的重要事件和背景。
+                    <br>
+                    <br>
+                    继续添加一些文本，以确保内容足够丰富，能够展示出卡片的设计效果。你可以根据需要调整文本的长度和格式。
+                </div>
+            </div>
+
+        </div>
+        <div id="clock">
+            <div id="clock-center"></div>
+            <div id="clock-pointer"></div>
+            <div id="clock-table"></div>
+        </div> 
+    </div>
+
+    <script>
+      
+      let offset = 0;
+      let maxOffset = 0;
+      let minOffset = -5;
+      const slides = Array.from(document.querySelectorAll(".card")); 
+      const clock = document.querySelector("#clock-table");  
+      const clockYears = [1969, 1989, 1998, 2007, 2010, 2015];
+      clock.innerHTML = "";
+      for (let i = -60; i < clockYears.length * 60; i += 6) {
+        addClockScale(i);
+        }
+      for (let i = 0; i < clockYears.length; i++) {
+        const degree = i * 60;;
+        addThickClockScale(degree, clockYears[i]);
+        }   
+    
+      
+        function addClockScale(degree) {
+            const invisibleClockTable = document.createElement("div");
+            invisibleClockTable.className = "invisible-table";
+            invisibleClockTable.style.transform = `rotate(${degree}deg)`;
+            const clockScale = document.createElement("div");
+            clockScale.className = "clock-scale";
+            invisibleClockTable.appendChild(clockScale);
+            clock.appendChild(invisibleClockTable);
+        }
+        function addThickClockScale(degree, time) {
+            const invisibleClockTable = document.createElement("div");
+            invisibleClockTable.className = "invisible-table";
+            invisibleClockTable.style.transform = `rotate(${degree}deg)`;
+            const thickClockScale = document.createElement("div");
+            thickClockScale.className = "clock-thick";
+            const scaleContent = document.createElement("span");
+            scaleContent.textContent = `${time}`;
+            thickClockScale.appendChild(scaleContent);
+            invisibleClockTable.appendChild(thickClockScale);
+            clock.appendChild(invisibleClockTable); 
+        }
+        function slideToPrev() {
+            offset = Math.min(maxOffset, offset + 1);
+            slides.forEach((slide => {
+                slide.style.transform = `translateY(${offset * 100}%)`;
+            }));
+            clockRotate(offset * 60);
+        }
+        function slideToNext() {
+            offset = Math.max(minOffset, offset - 1);
+            slides.forEach((slide => {
+                slide.style.transform = `translateY(${offset * 100}%)`;
+            }));
+            clockRotate(offset * 60);
+        }
+      function clockRotate(degree) {
+        clock.style.transform = `rotate(${degree}deg)`;
+        }
+    </script>
+</body>
+</html>
